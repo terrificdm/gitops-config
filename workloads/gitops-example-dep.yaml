@@ -15,7 +15,7 @@ spec:
   selector:
     matchLabels:
       app: gitops-example
-  replicas: 2
+  replicas: 3
   template:
     metadata:
       labels:
