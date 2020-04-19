@@ -1,3 +1,3 @@
 # EKS configuration files.
-# This is for EKS GitOps Demo.
+This is for EKS GitOps Demo.
 
