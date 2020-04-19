@@ -2,7 +2,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: gitops-example
+  name: gitops-example-deployment
   namespace: gitops-cicd
   labels:
     app: gitops-example
@@ -23,7 +23,7 @@ spec:
     spec:
       containers:
       - name: gitops-example
-        image: 634072196806.dkr.ecr.cn-north-1.amazonaws.com.cn/gitops-app:8d6d2b8
+        image: 634072196806.dkr.ecr.cn-north-1.amazonaws.com.cn/demo:latest
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 80
