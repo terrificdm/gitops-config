@@ -14,5 +14,5 @@ spec:
     path: charts/gitops-helm-demo
   values:
     image: 634072196806.dkr.ecr.cn-north-1.amazonaws.com.cn/gitops-app
-    tag: 3584ebc
+    tag: 00a2dc7
     
