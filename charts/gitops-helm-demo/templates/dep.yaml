@@ -1,0 +1,30 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gitops-example-deployment
+  namespace: gitops-helm
+  labels:
+    app: gitops-example
+  annotations:
+    # Container Image Automated Updates
+    flux.weave.works/automated: "true"
+    # do not apply this manifest on the cluster
+    #flux.weave.works/ignore: "true"
+spec:
+  selector:
+    matchLabels:
+      app: gitops-example
+  replicas: {{ .Values.replicaCount }}
+  template:
+    metadata:
+      labels:
+        app: gitops-example
+    spec:
+      containers:
+      - name: gitops-example
+        image: {{ .Values.image.repository }}:{{ .Values.version }}
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 80
+

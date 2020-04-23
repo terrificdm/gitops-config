@@ -1,0 +1,22 @@
+---
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: gitops-helm-demo
+  namespace: gitops-helm
+  annotations:
+    flux.weave.works/automated: "true"
+    # flux.weave.works/tag.nginx: semver:~1.16
+    # flux.weave.works/locked: 'true'
+    # flux.weave.works/locked_msg: '"Halt updates for now"'
+    # flux.weave.works/locked_user: User Name <user@example.com>
+spec:
+  releaseName: gitops-helm-demo
+  chart:
+    git: git@github.com:terrificdm/gitops-config
+    ref: master
+    path: charts/gitops-helm-demo
+  values:
+    # usePassword: true
+    image:image: 634072196806.dkr.ecr.cn-north-1.amazonaws.com.cn/gitops-app:978c780
+    

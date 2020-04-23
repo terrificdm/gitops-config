@@ -1,0 +1,6 @@
+apiVersion: v2
+name: gitops-helm-demo
+description: A Helm chart for GitOps Helm release demo
+type: application
+version: 0.1.0
+appVersion: 1.16.0
