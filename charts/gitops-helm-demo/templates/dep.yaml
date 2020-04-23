@@ -23,7 +23,7 @@ spec:
     spec:
       containers:
       - name: gitops-example
-        image: "{{ .Values.image.repository }}:{{ .Values.image.version }}"
+        image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 80
