@@ -3,7 +3,6 @@
 # Declare variables to be passed into your templates.
 
 replicaCount: 3
-
 image:
   repository: 634072196806.dkr.ecr.cn-north-1.amazonaws.com.cn/gitops-app
   tag: 00a2dc7

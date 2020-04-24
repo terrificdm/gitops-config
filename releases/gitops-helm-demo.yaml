@@ -6,6 +6,9 @@ metadata:
   namespace: gitops-helm
   annotations:
     flux.weave.works/automated: "true"
+    # flux.weave.works/locked: 'true'
+    # flux.weave.works/locked_msg: '"Halt updates for now"'
+    # flux.weave.works/locked_user: User Name <user@example.com>
 spec:
   releaseName: gitops-helm-demo
   chart:
@@ -15,5 +18,5 @@ spec:
   values:
     image:
       repository: 634072196806.dkr.ecr.cn-north-1.amazonaws.com.cn/gitops-app
-      tag: 427711e
+      tag: 00a2dc7
 
