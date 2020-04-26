@@ -18,5 +18,5 @@ spec:
   values:
     image:
       repository: 634072196806.dkr.ecr.cn-north-1.amazonaws.com.cn/gitops-app
-      tag: e43ec39
+      tag: 3f4091a
 
